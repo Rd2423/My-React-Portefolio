@@ -4,9 +4,11 @@ function Nav(props){
     const {
         choices = [],
         setCurrentChoice,
-        currentChoice
+        currentChoice,
+        contactSelected,
+        setContactSelected
     } = props;
-    
+
     useEffect(() => {
         document.title = currentChoice.name;
     }, [currentChoice])
@@ -15,19 +17,23 @@ function Nav(props){
         <header>
             <h1 className="name">Rayan Diouf</h1>
             <ul className= "navbar">
-            <li className="mx-1">About me</li>
+            
             <nav>
+                <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+                    <span onClick={() => setContactSelected(true)}>Contact</span>
+                </li>
                 {choices.map((choice) => (
                     <li className={`mx-1 ${
-                        currentChoice.name === choice.name  && 'navActive'
+                        currentChoice.name === choice.name  && !contactSelected && 'navActive'
                     }`}
                     key={choice.name}
                     >
                         <span
                         onClick={() => {
-                            setCurrentChoice(choice)
+                            setCurrentChoice(choice);
+                            setContactSelected(false);
                         }}
-                        ></span>
+                        >{choice.name}</span>
                     </li>
                 ))}
             </nav>
