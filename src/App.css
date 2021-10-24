@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+
+html {
+  margin: 0 auto;
+}
+
+:root {
+  --yellow: rgb(225, 225, 185);
+
+  --light: rgb(200, 210, 225);
+
+  --dark: rgb(47, 53, 70);
+
+  --darktext: black;
+
+  --spacing-one: calc(1rem * 0.5);
+
+  --spacing-two: calc(1rem);
+
+  --spacing-five: calc(2.5rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+
+  padding: 0;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  font-size: 18px;
+
+  letter-spacing: 0.1em;
+
+  background: var(--dark);
+
+  color: var(--light);
+
+  font-family: Source Code Pro;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+
+  font-weight: bold;
+
+  color: var(--light);
+
+  font-size: 1.15rem;
+}
+
+header {
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  background: var(--dark);
+
+  background-image: url("./assets/images/header.jpg");
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  background-position: center;
+
+  height: 300px;
+
+  font-family: Source code pro;
+
+  font-weight: bolder;
+
+  z-index: 999999;
+}
+
+h1 {
+  margin: 50px 0 0 25px;
+
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+.nav-item a {
+  color: black;
+}
+
+.nav-item {
+  cursor: pointer;
+
+  margin: 0px 16px;
+}
+
+.nav-link-active {
+  color: blue;
+
+  background-color: var(--light);
+
+  padding: 5px;
+}
+
+.nav-item .nav-link-active {
+  color: var(--yellow);
+
+  background-color: var(--dark);
+}
+
+.title {
+  margin: 60px 25px;
+  color: var(--light);
+}
+
+.jacob {
+  float: left;
+
+  max-height: 300px;
+
+  width: auto;
+
+  margin: 0 2vw 0 25px;
+}
+
+.para {
+  margin: 0 25px;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+.error-text,
+button,
+label {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  width: 450px;
+
+  padding: 0;
+
+  margin: 5px 25px;
+
+  box-sizing: border-box;
+
+  font-size: 1rem;
+
+  padding: 0.25rem;
+
+  border: 1px solid var(--dark);
+
+  outline: none;
+
+  border-radius: 3px;
+
+  transition: box-shadow 0.2s;
+}
+
+input:focus {
+  border: 1px solid var(--secondary);
+
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.pro-title {
+  text-align: center;
+
+  margin-bottom: 50px;
+
+  color: var(--light);
+}
+
+.test {
+  position: relative;
+
+  margin-bottom: 15px;
+}
+
+.project:hover {
+  opacity: 0.6;
+}
+
+.sub {
+  display: none;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 80%;
+
+  transform: translate(-50%, -50%);
+
+  background-color: var(--light);
+
+  padding-bottom: 28px;
+
+  text-align: center;
+}
+
+.name {
+  font-size: 1.5rem;
+
+  color: black;
+
+  max-height: 60px;
+
+  opacity: 1;
+
+  cursor: pointer;
+
+  padding-left: 10px;
+}
+
+.project-link {
+  max-height: 55px;
+
+  position: relative;
+
+  top: 17px;
+
+  opacity: 0.4;
+
+  cursor: pointer;
+}
+
+.test:hover .sub {
+  display: block;
+}
+
+.test:hover .project {
+  opacity: 0.4;
+
+  border: 12px solid rgb(253, 253, 213);
+}
+
+.project-link:hover {
+  opacity: 1;
+}
+
+.name:hover {
+  opacity: 1;
+
+  color: rgb(0, 0, 170);
+}
+
+.sub:hover .project {
+  opacity: 0.6;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+
+  justify-content: center;
+
+  margin: 25px;
+}
+
+footer img {
+  max-width: 55px;
+
+  margin: 10px;
+}
+
+.flex-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+
+.img-thumbnail {
+  width: 100%;
+
+  min-width: 600px;
+
+  max-width: 33vw;
+
+  height: auto;
+
+  margin: 5px;
+}
+
+.resume {
+  margin-left: 25px;
+}
+
+.resumeLink {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1254px) {
+  .img-thumbnail {
+    width: 100%;
+
+    min-width: 550px;
+
+    max-width: 75vw;
+
+    height: auto;
+
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 829px) {
+  .nav-link {
+    margin: 0 5px;
+
+    background-color: var(--light);
+
+    padding: 5px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
